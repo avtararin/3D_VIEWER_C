@@ -1,0 +1,9 @@
+digraph "/home/alekdandr/school21/C8_3DViewer_v1.0-1/src/backend/tests" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8c739bbef76d64b22d6b0911c526dd76 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="backend" fontname="Helvetica", fontsize="10", URL="dir_8c739bbef76d64b22d6b0911c526dd76.html"]
+  dir_ebd033c72479f4cbc6db869d301bc423 [shape=box, label="tests", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ebd033c72479f4cbc6db869d301bc423.html"];
+  }
+}

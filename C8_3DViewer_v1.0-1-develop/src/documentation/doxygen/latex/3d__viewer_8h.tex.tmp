@@ -1,0 +1,474 @@
+\hypertarget{3d__viewer_8h}{}\doxysection{/home/alekdandr/school21/\+C8\+\_\+3\+DViewer\+\_\+v1.0-\/1/src/backend/3d\+\_\+viewer.h File Reference}
+\label{3d__viewer_8h}\index{/home/alekdandr/school21/C8\_3DViewer\_v1.0-\/1/src/backend/3d\_viewer.h@{/home/alekdandr/school21/C8\_3DViewer\_v1.0-\/1/src/backend/3d\_viewer.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for 3d\+\_\+viewer.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpoints}{points}}
+\begin{DoxyCompactList}\small\item\em A structure named points containing fields with vertex coordinates along the x, y, and z axes. It has a points variable. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structvertex}{vertex}}
+\begin{DoxyCompactList}\small\item\em A structure named vertex containing fields\+: Has a vertex variable of the vertex structure type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpolygon}{polygon}}
+\begin{DoxyCompactList}\small\item\em A structure named polygon contains data with the number of values in one polygon and their values. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structData}{Data}}
+\begin{DoxyCompactList}\small\item\em A structure named \mbox{\hyperlink{structData}{Data}} contains an array of vertices, an array of polygons, and a number of polygons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{3d__viewer_8h_a3024ccd4a9af5109d24e6c57565d74a1}\label{3d__viewer_8h_a3024ccd4a9af5109d24e6c57565d74a1}} 
+\#define {\bfseries \+\_\+\+POSIX\+\_\+\+C\+\_\+\+SOURCE}~200809L
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structpoints}{points}} \mbox{\hyperlink{3d__viewer_8h_ade8c83cd2d25b1b56405b59cf0c8016f}{points}}
+\begin{DoxyCompactList}\small\item\em A structure named points containing fields with vertex coordinates along the x, y, and z axes. It has a points variable. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structvertex}{vertex}} \mbox{\hyperlink{3d__viewer_8h_ad0f5923379e298b172ea5ab8ae5b0eeb}{vertex}}
+\begin{DoxyCompactList}\small\item\em A structure named vertex containing fields\+: Has a vertex variable of the vertex structure type. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structpolygon}{polygon}} \mbox{\hyperlink{3d__viewer_8h_a8d513fb6e2630a376152aad9ca7b54d7}{polygon}}
+\begin{DoxyCompactList}\small\item\em A structure named polygon contains data with the number of values in one polygon and their values. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a3c7d12d60eadd3cf10e7096978320302}{Data}}
+\begin{DoxyCompactList}\small\item\em A structure named \mbox{\hyperlink{structData}{Data}} contains an array of vertices, an array of polygons, and a number of polygons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a248ae2cefd5ba21559d25579bcaf28ed}{parse\+\_\+counting}} (const char $\ast$filename, \mbox{\hyperlink{structData}{Data}} $\ast$data3d)
+\begin{DoxyCompactList}\small\item\em Parse the file and count the number of vertices and polygons. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a96bf5a2fbd58f2bfd4190a051d529385}{parse\+\_\+values}} (const char $\ast$filename, \mbox{\hyperlink{structData}{Data}} $\ast$data3d)
+\begin{DoxyCompactList}\small\item\em The function takes the x, y, z coordinates of the grid vertices from the file using the read\+\_\+point\+\_\+value function, and passes them to data3d. The function also takes polygon data from the file using the read\+\_\+poligon\+\_\+value function, and transfers them to data3d. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a7aba06394735de40a61114832e7297ce}{parse\+\_\+file}} (const char $\ast$filename, \mbox{\hyperlink{structData}{Data}} $\ast$data3d)
+\begin{DoxyCompactList}\small\item\em The program collects all the values, finds the min max values, centers and scales the object. Then all the received data is transferred to data3d. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a969e94549b319aad00c323fd5e396a79}{read\+\_\+point\+\_\+value}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d, char $\ast$line, int num\+\_\+of\+\_\+coord)
+\begin{DoxyCompactList}\small\item\em The function scans the coordinates of the x, y, z vertices and passes them to data3d. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a4d2465c70dc13ccbb095ef7a693a6069}{read\+\_\+polygon\+\_\+value}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d, char $\ast$line, int len, int num\+\_\+of\+\_\+polygon, int num\+\_\+of\+\_\+vertex)
+\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_abcf9273fe29df555474482cac534b0ce}{find\+\_\+min\+Max\+\_\+points}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d)
+\begin{DoxyCompactList}\small\item\em Finds min and max values in coordinates along the x, y, z axes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a636634641596eae3c7046a7cebb53991}{center\+\_\+values}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d)
+\begin{DoxyCompactList}\small\item\em Centering the object relative to the origin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_af4542d2476a605edc2c92d1351c20dcf}{scale}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d, double scale)
+\begin{DoxyCompactList}\small\item\em We limit the shape in the range from -\/1 to 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_aa6b6ddb7d0e8d145e958cfb292f59323}{data\+\_\+preparation}} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em The function allocates memory and uses the \mbox{\hyperlink{3d__viewer_8h_a7aba06394735de40a61114832e7297ce}{parse\+\_\+file()}} function to scan the file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_ad20ae0e9907408d9301a939bce0667cb}{turnX}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d, double angle)
+\begin{DoxyCompactList}\small\item\em The function changes the x-\/coordinate according to the selected angle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a20a159a1019c67d37efd3b82508afb02}{turnY}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d, double angle)
+\begin{DoxyCompactList}\small\item\em The function changes the y-\/coordinate according to the selected angle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a77cf5dc7bfbd3a5b1606443231d5bc5f}{turnZ}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d, double angle)
+\begin{DoxyCompactList}\small\item\em The function changes the z-\/coordinate according to the selected angle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_a710784e67ab24df44d8cfbf54e5fa3f4}{move\+Obj}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d, double offsetX, double offsetY, double offsetZ)
+\begin{DoxyCompactList}\small\item\em The function changes the all coordinates according to offsets. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{3d__viewer_8h_ad43aadfced98c2a24af3ca0a4201f55a}{scale\+Obj}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d, double \mbox{\hyperlink{3d__viewer_8h_af4542d2476a605edc2c92d1351c20dcf}{scale}})
+\begin{DoxyCompactList}\small\item\em The function changes the all coordinates according to scale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{3d__viewer_8h_a44400daeaac5373c70ee5fd6a51066dd}{free\+All\+Data}} (\mbox{\hyperlink{structData}{Data}} $\ast$data3d)
+\begin{DoxyCompactList}\small\item\em The function free memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It contains definitions of data types, structures, and function prototypes intended for use in multiple source data. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{3d__viewer_8h_a3c7d12d60eadd3cf10e7096978320302}\label{3d__viewer_8h_a3c7d12d60eadd3cf10e7096978320302}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!Data@{Data}}
+\index{Data@{Data}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{structData}{Data}}}
+
+
+
+A structure named \mbox{\hyperlink{structData}{Data}} contains an array of vertices, an array of polygons, and a number of polygons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & array of vertices \\
+\hline
+{\em p} & an array of polygons \\
+\hline
+{\em amount\+\_\+poligon} & number of polygons \\
+\hline
+{\em \mbox{\hyperlink{structData}{Data}}} & A variable of the \mbox{\hyperlink{structData}{Data}} structure type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{3d__viewer_8h_ade8c83cd2d25b1b56405b59cf0c8016f}\label{3d__viewer_8h_ade8c83cd2d25b1b56405b59cf0c8016f}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!points@{points}}
+\index{points@{points}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structpoints}{points}} \mbox{\hyperlink{structpoints}{points}}}
+
+
+
+A structure named points containing fields with vertex coordinates along the x, y, and z axes. It has a points variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & double a field with an x-\/axis coordinate \\
+\hline
+{\em y} & double a field with an y-\/axis coordinate \\
+\hline
+{\em z} & double a field with an z-\/axis coordinate \\
+\hline
+{\em points} & a variable of the points structure type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{3d__viewer_8h_a8d513fb6e2630a376152aad9ca7b54d7}\label{3d__viewer_8h_a8d513fb6e2630a376152aad9ca7b54d7}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!polygon@{polygon}}
+\index{polygon@{polygon}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{polygon}{polygon}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structpolygon}{polygon}} \mbox{\hyperlink{structpolygon}{polygon}}}
+
+
+
+A structure named polygon contains data with the number of values in one polygon and their values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Polygon values. (Coordinate values) \\
+\hline
+{\em amount\+\_\+p} & The number of values per polygon (faces in the same plane). \\
+\hline
+{\em poligon} & A variable of the poligon structure type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{3d__viewer_8h_ad0f5923379e298b172ea5ab8ae5b0eeb}\label{3d__viewer_8h_ad0f5923379e298b172ea5ab8ae5b0eeb}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!vertex@{vertex}}
+\index{vertex@{vertex}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{vertex}{vertex}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structvertex}{vertex}} \mbox{\hyperlink{structvertex}{vertex}}}
+
+
+
+A structure named vertex containing fields\+: Has a vertex variable of the vertex structure type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount\+\_\+vert} & int the variable contains the number of vertices. \\
+\hline
+{\em coord} & accepts coordinates of vertices at points x, y, z located in the points structure \\
+\hline
+{\em min\+Max\+X\mbox{[}2\mbox{]}} & the parameters for centering the shape on the x axis (first min, second max). \\
+\hline
+{\em min\+Max\+Y\mbox{[}2\mbox{]}} & the parameters for centering the shape on the y axis (first min, second max). \\
+\hline
+{\em min\+Max\+Z\mbox{[}2\mbox{]}} & the parameters for centering the shape on the z axis (first min, second max). \\
+\hline
+{\em vertex} & A variable of the vertex structure type \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{3d__viewer_8h_a636634641596eae3c7046a7cebb53991}\label{3d__viewer_8h_a636634641596eae3c7046a7cebb53991}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!center\_values@{center\_values}}
+\index{center\_values@{center\_values}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{center\_values()}{center\_values()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} center\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d }\end{DoxyParamCaption})}
+
+
+
+Centering the object relative to the origin. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data3d} & centered values by x, y, z coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+centered values by x, y, z coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_aa6b6ddb7d0e8d145e958cfb292f59323}\label{3d__viewer_8h_aa6b6ddb7d0e8d145e958cfb292f59323}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!data\_preparation@{data\_preparation}}
+\index{data\_preparation@{data\_preparation}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{data\_preparation()}{data\_preparation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} data\+\_\+preparation (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+The function allocates memory and uses the \mbox{\hyperlink{3d__viewer_8h_a7aba06394735de40a61114832e7297ce}{parse\+\_\+file()}} function to scan the file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Coordinates of vertices and polygons are taken from the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The program collects all the values, finds the min max values, centers and scales the object. Then all the received data is transferred to data3d 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_abcf9273fe29df555474482cac534b0ce}\label{3d__viewer_8h_abcf9273fe29df555474482cac534b0ce}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!find\_minMax\_points@{find\_minMax\_points}}
+\index{find\_minMax\_points@{find\_minMax\_points}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{find\_minMax\_points()}{find\_minMax\_points()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} find\+\_\+min\+Max\+\_\+points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d }\end{DoxyParamCaption})}
+
+
+
+Finds min and max values in coordinates along the x, y, z axes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data3d} & coordinates of the vertices along the x, y, z axes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns min and max values in coordinates along the x, y, z axes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_a44400daeaac5373c70ee5fd6a51066dd}\label{3d__viewer_8h_a44400daeaac5373c70ee5fd6a51066dd}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!freeAllData@{freeAllData}}
+\index{freeAllData@{freeAllData}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{freeAllData()}{freeAllData()}}
+{\footnotesize\ttfamily void free\+All\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d }\end{DoxyParamCaption})}
+
+
+
+The function free memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} required free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{3d__viewer_8h_a710784e67ab24df44d8cfbf54e5fa3f4}\label{3d__viewer_8h_a710784e67ab24df44d8cfbf54e5fa3f4}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!moveObj@{moveObj}}
+\index{moveObj@{moveObj}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{moveObj()}{moveObj()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} move\+Obj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d,  }\item[{double}]{offsetX,  }\item[{double}]{offsetY,  }\item[{double}]{offsetZ }\end{DoxyParamCaption})}
+
+
+
+The function changes the all coordinates according to offsets. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} with modified coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} required to change \\
+\hline
+\mbox{\texttt{ in}}  & {\em offsetX} & offset of the x coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em offsetY} & offset of the y coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em offsetZ} & offset of the z coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The received data is transmitted here. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_a248ae2cefd5ba21559d25579bcaf28ed}\label{3d__viewer_8h_a248ae2cefd5ba21559d25579bcaf28ed}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!parse\_counting@{parse\_counting}}
+\index{parse\_counting@{parse\_counting}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{parse\_counting()}{parse\_counting()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} parse\+\_\+counting (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d }\end{DoxyParamCaption})}
+
+
+
+Parse the file and count the number of vertices and polygons. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em FILE} & file name \\
+\hline
+\mbox{\texttt{ out}}  & {\em \mbox{\hyperlink{structData}{Data}}} & data3d a variable of the structure type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the number of vertices and the number of polygons 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_a7aba06394735de40a61114832e7297ce}\label{3d__viewer_8h_a7aba06394735de40a61114832e7297ce}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!parse\_file@{parse\_file}}
+\index{parse\_file@{parse\_file}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{parse\_file()}{parse\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} parse\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d }\end{DoxyParamCaption})}
+
+
+
+The program collects all the values, finds the min max values, centers and scales the object. Then all the received data is transferred to data3d. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Coordinates of vertices and polygons are taken from the file. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data3d} & The received data is transmitted here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The received data is transmitted here. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_a96bf5a2fbd58f2bfd4190a051d529385}\label{3d__viewer_8h_a96bf5a2fbd58f2bfd4190a051d529385}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!parse\_values@{parse\_values}}
+\index{parse\_values@{parse\_values}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{parse\_values()}{parse\_values()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} parse\+\_\+values (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d }\end{DoxyParamCaption})}
+
+
+
+The function takes the x, y, z coordinates of the grid vertices from the file using the read\+\_\+point\+\_\+value function, and passes them to data3d. The function also takes polygon data from the file using the read\+\_\+poligon\+\_\+value function, and transfers them to data3d. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Coordinates of vertices and polygons are taken from the file. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data3d} & The received data is transmitted here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The received data is transmitted here. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_a969e94549b319aad00c323fd5e396a79}\label{3d__viewer_8h_a969e94549b319aad00c323fd5e396a79}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!read\_point\_value@{read\_point\_value}}
+\index{read\_point\_value@{read\_point\_value}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{read\_point\_value()}{read\_point\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} read\+\_\+point\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d,  }\item[{char $\ast$}]{line,  }\item[{int}]{num\+\_\+of\+\_\+coord }\end{DoxyParamCaption})}
+
+
+
+The function scans the coordinates of the x, y, z vertices and passes them to data3d. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em data3d} & The received data is transmitted here. \\
+\hline
+\mbox{\texttt{ in}}  & {\em line} & A pointer to a string read by the getline() function \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The size of the memory in bytes of the memory block. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+\_\+of\+\_\+coord} & The vertex number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The received data is transmitted here. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_a4d2465c70dc13ccbb095ef7a693a6069}\label{3d__viewer_8h_a4d2465c70dc13ccbb095ef7a693a6069}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!read\_polygon\_value@{read\_polygon\_value}}
+\index{read\_polygon\_value@{read\_polygon\_value}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{read\_polygon\_value()}{read\_polygon\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} read\+\_\+polygon\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d,  }\item[{char $\ast$}]{line,  }\item[{int}]{len,  }\item[{int}]{num\+\_\+of\+\_\+polygon,  }\item[{int}]{num\+\_\+of\+\_\+vertex }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em data3d} & data3d The received data is transmitted here. \\
+\hline
+\mbox{\texttt{ in}}  & {\em line} & A pointer to a string read by the getline() function \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & The size of the memory in bytes of the memory block. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+\_\+of\+\_\+polygon} & The poligon number. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+\_\+of\+\_\+vertex} & The vertex number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data3d The received data is transmitted here. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_af4542d2476a605edc2c92d1351c20dcf}\label{3d__viewer_8h_af4542d2476a605edc2c92d1351c20dcf}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!scale@{scale}}
+\index{scale@{scale}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+
+
+We limit the shape in the range from -\/1 to 1. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data3d} & we pass the min max coordinate values for x, y, z \\
+\hline
+\mbox{\texttt{ in}}  & {\em scale} & The value we want to increase / reduce the shape. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+coordinates on a scale from 0 to 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_ad43aadfced98c2a24af3ca0a4201f55a}\label{3d__viewer_8h_ad43aadfced98c2a24af3ca0a4201f55a}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!scaleObj@{scaleObj}}
+\index{scaleObj@{scaleObj}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{scaleObj()}{scaleObj()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} scale\+Obj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+
+
+The function changes the all coordinates according to scale. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} with modified coordinates \\
+\hline
+\mbox{\texttt{ in}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} required to change \\
+\hline
+\mbox{\texttt{ in}}  & {\em scale} & In accordance with this value, the size of the figure decreases \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The received data is transmitted here. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_ad20ae0e9907408d9301a939bce0667cb}\label{3d__viewer_8h_ad20ae0e9907408d9301a939bce0667cb}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!turnX@{turnX}}
+\index{turnX@{turnX}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{turnX()}{turnX()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} turnX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+The function changes the x-\/coordinate according to the selected angle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} with modified x coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} required to change \\
+\hline
+\mbox{\texttt{ in}}  & {\em angle} & Angle for translating fugure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The received data is transmitted here. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_a20a159a1019c67d37efd3b82508afb02}\label{3d__viewer_8h_a20a159a1019c67d37efd3b82508afb02}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!turnY@{turnY}}
+\index{turnY@{turnY}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{turnY()}{turnY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} turnY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+The function changes the y-\/coordinate according to the selected angle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} with modified y coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} required to change \\
+\hline
+\mbox{\texttt{ in}}  & {\em angle} & Angle for translating fugure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The received data is transmitted here. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{3d__viewer_8h_a77cf5dc7bfbd3a5b1606443231d5bc5f}\label{3d__viewer_8h_a77cf5dc7bfbd3a5b1606443231d5bc5f}} 
+\index{3d\_viewer.h@{3d\_viewer.h}!turnZ@{turnZ}}
+\index{turnZ@{turnZ}!3d\_viewer.h@{3d\_viewer.h}}
+\doxysubsubsection{\texorpdfstring{turnZ()}{turnZ()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structData}{Data}} turnZ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}} $\ast$}]{data3d,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+The function changes the z-\/coordinate according to the selected angle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} with modified z coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em data3d} & \mbox{\hyperlink{structData}{Data}} required to change \\
+\hline
+\mbox{\texttt{ in}}  & {\em angle} & Angle for translating fugure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The received data is transmitted here. 
+\end{DoxyReturn}

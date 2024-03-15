@@ -1,0 +1,23 @@
+\hypertarget{structData}{}\doxysection{Data Struct Reference}
+\label{structData}\index{Data@{Data}}
+
+
+Collaboration diagram for Data\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structData_a2726db578d93c2968857b9f485ae7366}\label{structData_a2726db578d93c2968857b9f485ae7366}} 
+\mbox{\hyperlink{structvertex}{vertex}} $\ast$ {\bfseries v}
+\item 
+\mbox{\Hypertarget{structData_a8632e8569f7f2a190986ca40acad223c}\label{structData_a8632e8569f7f2a190986ca40acad223c}} 
+\mbox{\hyperlink{structpolygon}{polygon}} $\ast$ {\bfseries p}
+\item 
+\mbox{\Hypertarget{structData_a8b0ca18fb3572f6d851dc1274688ff5e}\label{structData_a8b0ca18fb3572f6d851dc1274688ff5e}} 
+int {\bfseries amount\+\_\+polygon}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/airat/\+C8\+\_\+3\+DViewer\+\_\+v1.\+0-\/1/src/backend/3d\+\_\+viewer.\+h\end{DoxyCompactItemize}

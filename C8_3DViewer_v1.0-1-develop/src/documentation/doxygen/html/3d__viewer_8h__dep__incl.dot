@@ -1,0 +1,9 @@
+digraph "/home/airat/C8_3DViewer_v1.0-1/src/backend/3d_viewer.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/airat/C8_3DViewer\l_v1.0-1/src/backend/3d\l_viewer.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="It contains definitions of data types, structures, and function prototypes intended for use in multip..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="/home/airat/C8_3DViewer\l_v1.0-1/src/backend/tests\l/tests.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tests_8h_source.html",tooltip=" "];
+}
